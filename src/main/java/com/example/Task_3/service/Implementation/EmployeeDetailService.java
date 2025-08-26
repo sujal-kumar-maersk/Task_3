@@ -6,6 +6,7 @@ import com.example.Task_3.repository.EmployeeDetailRepo;
 import com.example.Task_3.repository.EmployeeRepo;
 import com.example.Task_3.service.Interface.EmployeeDetailServiceInterface;
 import jakarta.persistence.EntityNotFoundException;
+import jakarta.transaction.Transactional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -72,15 +73,16 @@ public class EmployeeDetailService implements EmployeeDetailServiceInterface {
 
 
     @Override
-    public void deleteDetails(String id) {
+    @Transactional
+    public void deleteDetails(Long id) {
         logger.info("Looking for entries employee details in employee_detail table");
-        EmployeeDetail empDet = empDetRep.findById(id)
+        EmployeeDetail empDet = empDetRep.findById(String.valueOf(id))
                 .orElseThrow(() -> new EntityNotFoundException("Employee details does not exist with id " + id));
 
         Employee emp = empDet.getEmployee();
         emp.setEmployeeDetail(null);
 
-        empDetRep.deleteById(id);
+        empDetRep.deleteById(String.valueOf(id));
 
     }
 }

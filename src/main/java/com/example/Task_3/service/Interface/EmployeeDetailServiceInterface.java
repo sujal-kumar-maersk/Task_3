@@ -16,5 +16,5 @@ public interface EmployeeDetailServiceInterface {
     void updateDetails(EmployeeDetail incomingDetail);
 
     @ExceptionHandler(EntityNotFoundException.class)
-    void deleteDetails(String id);
+    void deleteDetails(Long id);
 }
