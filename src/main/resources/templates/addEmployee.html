@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Employee</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f5f5f5;
+            margin: 40px;
+        }
+
+        form {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            font-weight: 600;
+            display: block;
+            margin-bottom: 6px;
+            color: #444;
+        }
+    </style>
+</head>
+<body>
+<h2>Add Employee</h2>
+
+<form th:action="@{/api/employee/add}" th:object="${employee}" method="post">
+    <!-- Basic Employee Fields -->
+    <label>ID</label>
+    <input type="text" th:field="*{id}" placeholder="Employee ID" required />
+
+    <label>Name</label>
+    <input type="text" th:field="*{name}" placeholder="Employee Name" required />
+
+    <label>Role</label>
+    <input type="text" th:field="*{role}" placeholder="Role" required />
+
+    <label>Reporting Manager ID</label>
+    <input type="text" th:field="*{reportingTo}" placeholder="Manager ID" />
+
+    <!-- Embedded EmployeeDetail Fields -->
+    <label>Age</label>
+    <input type="number" th:field="*{employeeDetail.age}" placeholder="Age" required />
+
+    <label>Experience (Years)</label>
+    <input type="number" th:field="*{employeeDetail.experienceYears}" placeholder="Experience in Years" required />
+
+    <label>Department</label>
+    <input type="text" th:field="*{employeeDetail.departmentName}" placeholder="Department Name" required />
+
+    <label>Project</label>
+    <input type="text" th:field="*{employeeDetail.project}" placeholder="Project Name" required />
+
+    <button type="submit">Add Employee</button>
+</form>
+</body>
+</html>

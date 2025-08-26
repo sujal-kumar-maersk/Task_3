@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <title>Employee Management Home</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            margin: 60px;
+            text-align: center;
+            color: #333;
+        }
+
+        h1 {
+            margin-bottom: 40px;
+            color: #2c3e50;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        button, a.button-link {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1.1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            min-width: 180px;
+        }
+
+        button:hover, a.button-link:hover {
+            background-color: #45a049;
+        }
+
+        /* Input style for ID search */
+        #searchId {
+            padding: 10px;
+            font-size: 1rem;
+            border: 2px solid #4CAF50;
+            border-radius: 6px;
+            width: 200px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+<h1>Employee Management Home</h1>
+
+<div class="button-container">
+    <a class="button-link" th:href="@{/api/employee}">View All Employees</a>
+
+    <a class="button-link" href="/api/employee/add">Add Employee</a>
+
+    <!-- Search by ID form -->
+    <form id="searchForm" style="display: flex; align-items: center; justify-content: center; gap: 10px;" onsubmit="return goToEmployee(event)">
+        <input type="text" id="searchId" name="id" placeholder="Search Employee ID" required />
+        <button type="submit">Search</button>
+    </form>
+
+    <a class="button-link" href="/api/employee/update">Update Employee</a>
+
+    <a class="button-link" href="/api/employee/delete">Delete Employee</a>
+</div>
+
+<script>
+    function goToEmployee(event) {
+        event.preventDefault();
+        const id = document.getElementById('searchId').value.trim();
+        if (id) {
+            window.location.href = `/api/employee/${encodeURIComponent(id)}`;
+        }
+        return false;
+    }
+</script>
+
+</body>
+</html>

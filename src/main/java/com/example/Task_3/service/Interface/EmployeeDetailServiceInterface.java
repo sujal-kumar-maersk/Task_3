@@ -15,6 +15,4 @@ public interface EmployeeDetailServiceInterface {
     @ExceptionHandler(IllegalArgumentException.class)
     void updateDetails(EmployeeDetail incomingDetail);
 
-    @ExceptionHandler(EntityNotFoundException.class)
-    void deleteDetails(Long id);
 }

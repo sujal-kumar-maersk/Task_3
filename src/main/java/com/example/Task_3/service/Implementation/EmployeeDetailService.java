@@ -71,18 +71,4 @@ public class EmployeeDetailService implements EmployeeDetailServiceInterface {
         empDetRep.save(existingDetail);
     }
 
-
-    @Override
-    @Transactional
-    public void deleteDetails(Long id) {
-        logger.info("Looking for entries employee details in employee_detail table");
-        EmployeeDetail empDet = empDetRep.findById(String.valueOf(id))
-                .orElseThrow(() -> new EntityNotFoundException("Employee details does not exist with id " + id));
-
-        Employee emp = empDet.getEmployee();
-        emp.setEmployeeDetail(null);
-
-        empDetRep.deleteById(String.valueOf(id));
-
-    }
 }

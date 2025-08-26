@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>ALL EMPLOYEE DETAILS</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            margin: 40px;
+            color: #333;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #2c3e50;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin: 0 auto;
+            width: 90%;
+            max-width: 1000px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ddd;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #d1e7dd;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+<h2>Employee Details</h2>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Role</th>
+        <th>Experience</th>
+        <th>Department</th>
+        <th>Project</th>
+        <th>Reporting Manager ID</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="emp : ${employees}">
+        <td th:text="${emp.id}">ID</td>
+        <td th:text="${emp.name}">Name</td>
+        <td th:text="${emp.employeeDetail.age}">Age</td>
+        <td th:text="${emp.role}">Role</td>
+        <td th:text="${emp.employeeDetail.experienceYears}">Experience</td>
+        <td th:text="${emp.employeeDetail.departmentName}">Department</td>
+        <td th:text="${emp.employeeDetail.project}">Project</td>
+        <td th:text="${emp.reportingTo}">Reporting Manager ID</td>
+        <td>
+            <a th:href="@{'/api/employee/update/' + ${emp.id}}"
+               style="display: inline-block; padding: 6px 14px; background-color: #2980b9; color: #fff; text-decoration: none; border-radius: 4px; font-weight: 600; font-size: 0.9rem; transition: background-color 0.3s ease;"
+               onmouseover="this.style.backgroundColor='#1c5980'"
+               onmouseout="this.style.backgroundColor='#2980b9'">
+                Edit
+            </a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

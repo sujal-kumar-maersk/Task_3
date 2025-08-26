@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Enter Employee ID for Update</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f0f0f0;
+            margin: 40px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        button {
+            background-color: #1976D2;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0D47A1;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+    </style>
+    <script>
+        function redirectToUpdate() {
+            const id = document.getElementById("empId").value.trim();
+            if (id) {
+                window.location.href = "/api/employee/update/" + id;
+            } else {
+                alert("Please enter a valid employee ID.");
+            }
+            return false;
+        }
+    </script>
+</head>
+<body>
+<h2>Update Employee</h2>
+<form onsubmit="return redirectToUpdate()">
+    <label for="empId">Enter Employee ID</label>
+    <input type="text" id="empId" placeholder="Employee ID" />
+    <button type="submit">Continue</button>
+</form>
+</body>
+</html>

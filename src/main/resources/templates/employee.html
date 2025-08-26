@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee</title>
+    <style>
+        body {
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          background-color: #f9f9f9;
+          color: #333;
+          margin: 40px;
+        }
+
+        h2 {
+          text-align: center;
+          color: #2c3e50;
+          margin-bottom: 20px;
+        }
+
+        ul {
+          list-style-type: none;
+          max-width: 400px;
+          margin: 0 auto;
+          padding: 0;
+          background: white;
+          box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+          border-radius: 8px;
+        }
+
+        ul li {
+          padding: 12px 20px;
+          border-bottom: 1px solid #e1e4e8;
+          font-size: 1.1rem;
+          display: flex;
+          justify-content: space-between;
+        }
+
+        ul li:last-child {
+          border-bottom: none;
+        }
+
+        ul li::before {
+          content: attr(data-label);
+          font-weight: 600;
+          margin-right: 10px;
+          color: #555;
+          flex-shrink: 0;
+        }
+    </style>
+</head>
+<body>
+<h2 th:text="'Employee Details for ID : ' + ${employee.id}">Employee Details for ID : </h2>
+<ul>
+    <li data-label="ID:" th:text="${employee.id}"></li>
+    <li data-label="Name:" th:text="${employee.name}"></li>
+    <li data-label="Age:" th:text="${employee.employeeDetail.age}"></li>
+    <li data-label="Role:" th:text="${employee.role}"></li>
+    <li data-label="Experience:" th:text="${employee.employeeDetail.experienceYears}"></li>
+    <li data-label="Department:" th:text="${employee.employeeDetail.departmentName}"></li>
+    <li data-label="Project:" th:text="${employee.employeeDetail.project}"></li>
+    <li data-label="Reporting Manager:" th:text="${employee.reportingTo}"></li>
+</ul>
+<a th:href="@{'/api/employee/update/' + ${emp.id}}" style="display: block; width: fit-content; margin: 30px auto 0; padding: 10px 20px; background-color: #2c3e50; color: #fff; text-decoration: none; border-radius: 6px; font-size: 1rem; text-align: center; transition: background-color 0.3s ease;" onmouseover="this.style.backgroundColor='#34495e'" onmouseout="this.style.backgroundColor='#2c3e50'">Edit</a>
+
+</body>
+</html>

@@ -29,9 +29,4 @@ public class EmployeeDetailController {
     }
 
 
-    @DeleteMapping("/{id}")
-    public void deleteDetails(@PathVariable Long id){
-        empDetService.deleteDetails(id);
-    }
-
 }
