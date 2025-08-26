@@ -1,0 +1,114 @@
+2025-08-23T00:53:41.976+05:30  INFO 25384 --- [Task_3] [restartedMain] com.example.Task_3.Task3Application      : Starting Task3Application using Java 24.0.2 with PID 25384 (C:\Users\SKU727\Downloads\Task_3 (1)\Task_3\target\classes started by SKU727 in C:\Users\SKU727\Downloads\Task_3 (1)\Task_3)
+2025-08-23T00:53:41.978+05:30 DEBUG 25384 --- [Task_3] [restartedMain] com.example.Task_3.Task3Application      : Running with Spring Boot v3.5.5, Spring v6.2.10
+2025-08-23T00:53:41.980+05:30  INFO 25384 --- [Task_3] [restartedMain] com.example.Task_3.Task3Application      : No active profile set, falling back to 1 default profile: "default"
+2025-08-23T00:53:42.115+05:30  INFO 25384 --- [Task_3] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-08-23T00:53:42.115+05:30  INFO 25384 --- [Task_3] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-08-23T00:53:43.274+05:30  INFO 25384 --- [Task_3] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-23T00:53:43.403+05:30  INFO 25384 --- [Task_3] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 106 ms. Found 2 JPA repository interfaces.
+2025-08-23T00:53:44.331+05:30  INFO 25384 --- [Task_3] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 3000 (http)
+2025-08-23T00:53:44.357+05:30  INFO 25384 --- [Task_3] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-23T00:53:44.357+05:30  INFO 25384 --- [Task_3] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-08-23T00:53:44.425+05:30  INFO 25384 --- [Task_3] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-23T00:53:44.426+05:30  INFO 25384 --- [Task_3] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2310 ms
+2025-08-23T00:53:44.756+05:30  INFO 25384 --- [Task_3] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-23T00:53:44.863+05:30  INFO 25384 --- [Task_3] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2025-08-23T00:53:44.925+05:30  INFO 25384 --- [Task_3] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-23T00:53:45.454+05:30  INFO 25384 --- [Task_3] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-23T00:53:45.504+05:30  INFO 25384 --- [Task_3] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-23T00:53:45.858+05:30  INFO 25384 --- [Task_3] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@248b82b5
+2025-08-23T00:53:45.861+05:30  INFO 25384 --- [Task_3] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-23T00:53:45.908+05:30  WARN 25384 --- [Task_3] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-23T00:53:45.940+05:30  INFO 25384 --- [Task_3] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-23T00:53:47.173+05:30  INFO 25384 --- [Task_3] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-23T00:53:47.268+05:30  INFO 25384 --- [Task_3] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-23T00:53:47.656+05:30  WARN 25384 --- [Task_3] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-23T00:53:48.277+05:30  INFO 25384 --- [Task_3] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-08-23T00:53:48.337+05:30  INFO 25384 --- [Task_3] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 3000 (http) with context path '/'
+2025-08-23T00:53:48.350+05:30  INFO 25384 --- [Task_3] [restartedMain] com.example.Task_3.Task3Application      : Started Task3Application in 7.239 seconds (process running for 8.109)
+2025-08-23T00:56:22.711+05:30  INFO 25384 --- [Task_3] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-23T00:56:22.728+05:30  INFO 25384 --- [Task_3] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-08-23T00:56:22.732+05:30  INFO 25384 --- [Task_3] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-23T00:56:22.739+05:30  INFO 25384 --- [Task_3] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-23T00:56:22.741+05:30  INFO 25384 --- [Task_3] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-23T00:56:26.218+05:30  INFO 20952 --- [Task_3] [restartedMain] com.example.Task_3.Task3Application      : Starting Task3Application using Java 24.0.2 with PID 20952 (C:\Users\SKU727\Downloads\Task_3 (1)\Task_3\target\classes started by SKU727 in C:\Users\SKU727\Downloads\Task_3 (1)\Task_3)
+2025-08-23T00:56:26.220+05:30 DEBUG 20952 --- [Task_3] [restartedMain] com.example.Task_3.Task3Application      : Running with Spring Boot v3.5.5, Spring v6.2.10
+2025-08-23T00:56:26.221+05:30  INFO 20952 --- [Task_3] [restartedMain] com.example.Task_3.Task3Application      : No active profile set, falling back to 1 default profile: "default"
+2025-08-23T00:56:26.312+05:30  INFO 20952 --- [Task_3] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-08-23T00:56:26.313+05:30  INFO 20952 --- [Task_3] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-08-23T00:56:27.459+05:30  INFO 20952 --- [Task_3] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-23T00:56:27.561+05:30  INFO 20952 --- [Task_3] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 88 ms. Found 2 JPA repository interfaces.
+2025-08-23T00:56:28.505+05:30  INFO 20952 --- [Task_3] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 3000 (http)
+2025-08-23T00:56:28.527+05:30  INFO 20952 --- [Task_3] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-23T00:56:28.528+05:30  INFO 20952 --- [Task_3] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-08-23T00:56:28.599+05:30  INFO 20952 --- [Task_3] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-23T00:56:28.599+05:30  INFO 20952 --- [Task_3] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2284 ms
+2025-08-23T00:56:28.957+05:30  INFO 20952 --- [Task_3] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-23T00:56:29.050+05:30  INFO 20952 --- [Task_3] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2025-08-23T00:56:29.108+05:30  INFO 20952 --- [Task_3] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-23T00:56:29.770+05:30  INFO 20952 --- [Task_3] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-23T00:56:29.847+05:30  INFO 20952 --- [Task_3] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-23T00:56:30.334+05:30  INFO 20952 --- [Task_3] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@29275fae
+2025-08-23T00:56:30.337+05:30  INFO 20952 --- [Task_3] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-23T00:56:30.399+05:30  WARN 20952 --- [Task_3] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-23T00:56:30.442+05:30  INFO 20952 --- [Task_3] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-23T00:56:31.810+05:30  INFO 20952 --- [Task_3] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-23T00:56:31.915+05:30  INFO 20952 --- [Task_3] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-23T00:56:32.869+05:30  INFO 20952 --- [Task_3] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-08-23T00:56:32.926+05:30  INFO 20952 --- [Task_3] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 3000 (http) with context path '/'
+2025-08-23T00:56:32.941+05:30  INFO 20952 --- [Task_3] [restartedMain] com.example.Task_3.Task3Application      : Started Task3Application in 7.543 seconds (process running for 8.381)
+2025-08-23T01:02:20.816+05:30  INFO 20952 --- [Task_3] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-23T01:02:20.840+05:30  INFO 20952 --- [Task_3] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-08-23T01:02:20.846+05:30  INFO 20952 --- [Task_3] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-23T01:02:20.859+05:30  INFO 20952 --- [Task_3] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-23T01:02:20.866+05:30  INFO 20952 --- [Task_3] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-23T01:02:24.355+05:30  INFO 4216 --- [Task_3] [restartedMain] com.example.Task_3.Task3Application      : Starting Task3Application using Java 24.0.2 with PID 4216 (C:\Users\SKU727\Downloads\Task_3 (1)\Task_3\target\classes started by SKU727 in C:\Users\SKU727\Downloads\Task_3 (1)\Task_3)
+2025-08-23T01:02:24.358+05:30 DEBUG 4216 --- [Task_3] [restartedMain] com.example.Task_3.Task3Application      : Running with Spring Boot v3.5.5, Spring v6.2.10
+2025-08-23T01:02:24.359+05:30  INFO 4216 --- [Task_3] [restartedMain] com.example.Task_3.Task3Application      : No active profile set, falling back to 1 default profile: "default"
+2025-08-23T01:02:24.476+05:30  INFO 4216 --- [Task_3] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-08-23T01:02:24.476+05:30  INFO 4216 --- [Task_3] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-08-23T01:02:25.811+05:30  INFO 4216 --- [Task_3] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-23T01:02:25.928+05:30  INFO 4216 --- [Task_3] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 98 ms. Found 2 JPA repository interfaces.
+2025-08-23T01:02:26.889+05:30  INFO 4216 --- [Task_3] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 3000 (http)
+2025-08-23T01:02:26.918+05:30  INFO 4216 --- [Task_3] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-23T01:02:26.919+05:30  INFO 4216 --- [Task_3] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-08-23T01:02:27.006+05:30  INFO 4216 --- [Task_3] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-23T01:02:27.007+05:30  INFO 4216 --- [Task_3] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2530 ms
+2025-08-23T01:02:27.342+05:30  INFO 4216 --- [Task_3] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-23T01:02:27.425+05:30  INFO 4216 --- [Task_3] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2025-08-23T01:02:27.482+05:30  INFO 4216 --- [Task_3] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-23T01:02:28.038+05:30  INFO 4216 --- [Task_3] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-23T01:02:28.074+05:30  INFO 4216 --- [Task_3] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-23T01:02:28.411+05:30  INFO 4216 --- [Task_3] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@560558be
+2025-08-23T01:02:28.417+05:30  INFO 4216 --- [Task_3] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-23T01:02:28.612+05:30  INFO 4216 --- [Task_3] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-23T01:02:29.738+05:30  INFO 4216 --- [Task_3] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-23T01:02:29.832+05:30  INFO 4216 --- [Task_3] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-23T01:02:30.691+05:30  INFO 4216 --- [Task_3] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-08-23T01:02:30.767+05:30  INFO 4216 --- [Task_3] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 3000 (http) with context path '/'
+2025-08-23T01:02:30.782+05:30  INFO 4216 --- [Task_3] [restartedMain] com.example.Task_3.Task3Application      : Started Task3Application in 7.408 seconds (process running for 8.369)
+2025-08-23T01:03:11.708+05:30  INFO 4216 --- [Task_3] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-23T01:03:11.726+05:30  INFO 4216 --- [Task_3] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-08-23T01:03:11.731+05:30  INFO 4216 --- [Task_3] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-23T01:03:11.738+05:30  INFO 4216 --- [Task_3] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-23T01:03:11.742+05:30  INFO 4216 --- [Task_3] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
