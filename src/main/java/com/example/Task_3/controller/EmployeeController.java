@@ -43,8 +43,8 @@ public class EmployeeController {
 
     @GetMapping("/{id}")
     public String getEmployeeById(@PathVariable String id,Model model){
-        Employee emp = empService.getEmployeeById(id);
-        model.addAttribute("employee",emp);
+        Employee employee = empService.getEmployeeById(id);
+        model.addAttribute("employee",employee);
         return "employee";
     }
 

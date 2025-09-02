@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Error Page</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f8f9fa;
+            color: #333;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .error-container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 40px;
+            max-width: 600px;
+            margin: auto;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .error-code {
+            font-size: 72px;
+            font-weight: bold;
+            color: #dc3545; /* Bootstrap red */
+        }
+
+        .error-message {
+            font-size: 24px;
+            margin: 20px 0;
+        }
+
+        .home-link {
+            margin-top: 30px;
+            display: inline-block;
+            text-decoration: none;
+            color: #007bff;
+            border: 1px solid #007bff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .home-link:hover {
+            background-color: #007bff;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+<div class="error-container">
+    <div class="error-code" th:text="${status}">404</div>
+    <div class="error-message" th:text="${body}">Something went wrong.</div>
+    <a href="/api/employee/home" class="home-link">Go to Homepage</a>
+</div>
+</body>
+</html>
