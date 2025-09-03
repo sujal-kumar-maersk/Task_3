@@ -2,8 +2,10 @@ package com.example.Task_3.controller;
 
 import com.example.Task_3.model.Employee;
 import com.example.Task_3.model.EmployeeDetail;
+import com.example.Task_3.model.ROLE;
 import com.example.Task_3.service.Implementation.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.support.BeanDefinitionDsl;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -63,6 +65,13 @@ public class EmployeeController {
         return "updateEmployee";
     }
 
+
+    @GetMapping("/employeeByRole/{role}")
+    public String employeeByRole(@PathVariable String role,Model model){
+        List<Employee> employees = empService.getEmployeeByRole(ROLE.valueOf(role));
+        model.addAttribute("employees",employees);
+        return "allEmployee";
+    }
     @PostMapping("/update")
     public String updateEmployee(@ModelAttribute Employee employee){
         empService.updateEmployee(employee);

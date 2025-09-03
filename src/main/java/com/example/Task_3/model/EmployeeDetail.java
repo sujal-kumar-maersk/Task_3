@@ -1,10 +1,12 @@
 package com.example.Task_3.model;
 
+import com.example.Task_3.validation.Validatable;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 import org.antlr.v4.runtime.misc.NotNull;
 import org.hibernate.annotations.Cascade;
 import org.springframework.boot.context.properties.bind.DefaultValue;
@@ -16,7 +18,8 @@ import java.util.UUID;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class EmployeeDetail {
+@ToString(exclude = "employee")
+public class EmployeeDetail implements Validatable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -38,5 +41,21 @@ public class EmployeeDetail {
     @JoinColumn(name = "employee_id", nullable = false, unique = true)
     @JsonBackReference
     private Employee employee;
+
+    @Override
+    public void validate() {
+        if (age == null || age < 18) {
+            throw new IllegalArgumentException("Age must be at least 18");
+        }
+        if (experienceYears == null || experienceYears < 0) {
+            throw new IllegalArgumentException("Experience years cannot be negative");
+        }
+        if (departmentName == null || departmentName.trim().isEmpty()) {
+            throw new IllegalArgumentException("Department name is required");
+        }
+        if (project == null || project.trim().isEmpty()) {
+            throw new IllegalArgumentException("Project name is required");
+        }
+    }
 }
 
