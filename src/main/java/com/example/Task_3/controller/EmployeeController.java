@@ -5,6 +5,7 @@ import com.example.Task_3.model.EmployeeDetail;
 import com.example.Task_3.model.ROLE;
 import com.example.Task_3.service.Implementation.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.context.support.BeanDefinitionDsl;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -69,6 +70,13 @@ public class EmployeeController {
     @GetMapping("/employeeByRole/{role}")
     public String employeeByRole(@PathVariable String role,Model model){
         List<Employee> employees = empService.getEmployeeByRole(ROLE.valueOf(role));
+        model.addAttribute("employees",employees);
+        return "allEmployee";
+    }
+
+    @GetMapping("/employeeUnderManager/{id}")
+    public String getAllEmployeeUnderManager(@PathVariable String id,Model model){
+        List<Employee> employees = empService.getAllEmployeeUnderManager(id);
         model.addAttribute("employees",employees);
         return "allEmployee";
     }

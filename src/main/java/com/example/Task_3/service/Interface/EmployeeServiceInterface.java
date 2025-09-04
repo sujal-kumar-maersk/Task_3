@@ -23,4 +23,5 @@ public interface EmployeeServiceInterface {
     @ExceptionHandler(EntityNotFoundException.class)
     void deleteEmployee(String id);
 
+    List<Employee> getAllEmployeeUnderManager(String id);
 }

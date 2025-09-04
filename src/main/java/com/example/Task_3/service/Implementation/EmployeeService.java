@@ -75,6 +75,11 @@ public class EmployeeService implements EmployeeServiceInterface {
     }
 
     @Override
+    public List<Employee> getAllEmployeeUnderManager(String id){
+        return empRepo.findAllEmployeeUnderManagerById(id);
+    }
+
+    @Override
     @CacheEvict(value = "applicationCache",key="#id")
     public void deleteEmployee(String id){
         Employee employee = empRepo.findById(id)
